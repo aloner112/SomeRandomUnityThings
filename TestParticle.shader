@@ -9,6 +9,7 @@ Shader "Particles/TestParticle"
         Tags {
             "Queue"="Transparent"
             "RenderType"="Transparent"
+            "CanUseSpriteAtlas"="True"
             }
         LOD 100
         Blend SrcAlpha OneMinusSrcAlpha
