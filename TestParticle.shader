@@ -53,14 +53,7 @@ Shader "Particles/TestParticle"
             {                
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
-                if(col.a < 1.0f){discard;}
-                if(col.g == 1 && col.r == 0 && col.b == 0){discard;}
-                if(col.g > (col.r + col.b)*2)
-                {
-                    // discard;
-                    fixed a = 1.0f - col.g;
-                    return fixed4(col.r, (col.r + col.b)*0.5f, col.b, a);
-                }
+                if(col.a == 0.0f){discard;}
                 return col;
             }
             ENDCG
